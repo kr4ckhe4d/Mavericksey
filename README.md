@@ -3,8 +3,7 @@ Mavericksey
 
 A script for OS X to display system information
 
-!['Screenshot'](https://raw.github.com/Gary00/OSXey/master/screenshot_normal.png)
-!['Screenshot'](https://raw.github.com/Gary00/OSXey/master/screenshot_color.png)
+!['Screenshot'](http://i.imgur.com/ftUfa1Z.png)
 
 
 Install / Uninstall
@@ -14,6 +13,10 @@ Use 'install.sh` to both install and uninstall.
 Add the following line at the end of your ~/.bash_profile:
 
     OSXey
+    
+or this one to have colored logo:
+
+    OSXey -c
 
 
 Options
