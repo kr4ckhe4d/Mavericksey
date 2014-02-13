@@ -1,4 +1,4 @@
-GOSXey
+Mavericksey
 ===============
 
 A script for OS X to display system information
@@ -10,6 +10,10 @@ A script for OS X to display system information
 Install / Uninstall
 ------------
 Use 'install.sh` to both install and uninstall.
+
+Add the following line at the end of your ~/.bash_profile:
+
+    OSXey
 
 
 Options
