@@ -12,11 +12,11 @@ Use 'install.sh` to both install and uninstall.
 
 Add the following line at the end of your ~/.bash_profile:
 
-    OSXey
+    mavericksey
     
 or this one to have colored logo:
 
-    OSXey -c
+    mavericksey -c
 
 
 Options
