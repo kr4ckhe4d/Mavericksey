@@ -4,8 +4,8 @@
 #List of options
 echo ""
 echo "Please choose an option:"
-echo "1. Install OSXey to /usr/local/bin"
-echo "2. Uninstall OSXey from /usr/local/bin"
+echo "1. Install Mavericksey to /usr/local/bin"
+echo "2. Uninstall Mavericksey from /usr/local/bin"
 echo -n "Option: "
 read answer
 echo ""
@@ -15,8 +15,8 @@ if [ $answer == 1 ]
 then
 
    #copy script
-   sudo cp OSXey /usr/local/bin/
-   sudo chmod +x /usr/local/bin/OSXey
+   sudo cp mavericksey /usr/local/bin/
+   sudo chmod +x /usr/local/bin/mavericksey
    
    #display message
    tput setaf 2
@@ -27,7 +27,7 @@ elif [ $answer == 2 ]
 then
 
    #remove script  
-   sudo rm -f /usr/local/bin/OSXey
+   sudo rm -f /usr/local/bin/mavericksey
 
    #display message
    tput setaf 2
