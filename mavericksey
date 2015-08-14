@@ -18,38 +18,45 @@ model=$(uname -smr)
 # ==VERSION==
 versionNumber=$(sw_vers -productVersion) # Finds version number
 
-versionShort=${versionNumber:0:4}  # Cut sting to 1 decimal place for calculation
-		 
-case $versionShort in
-	10.9)
-		versionString="Mavericks"
+versionShort=${versionNumber:0:5}  # Cut sting to 1 decimal place for calculation
+versionCode=(${versionShort//./ })
+
+case ${versionCode[1]} in
+	0)
+		versionString="Cheetah"
 		;;
-	10.8)
-		versionString="Mountian Lion"
-		;;
-	10.7)
-		versionString="Lion"
-		;;
-	10.6)
-		versionString="Snow Leopard"
-		;;
-	10.5)
-		versionString="Leopard"
-		;;
-	10.4)
-		versionString="Tiger"
-		;;
-	10.3)
-		versionString="Panther"
-		;;
-	10.2)
-		versionString="Jaguar"
-		;;
-	10.1)
+	1)
 		versionString="Puma"
 		;;
-	10.0)
-		versionString="Cheetah"
+	2)
+		versionString="Jaguar"
+		;;
+	3)
+		versionString="Panther"
+		;;
+	4)
+		versionString="Tiger"
+		;;
+	5)
+		versionString="Leopard"
+		;;
+	6)
+		versionString="Snow Leopard"
+		;;
+	7)
+		versionString="Lion"
+		;;
+	8)
+		versionString="Mountian Lion"
+		;;
+	9)
+		versionString="Mavericks"
+		;;
+	10)
+		versionString="Yosemite"
+		;;
+	11)
+		versionString="El Capitan"
 		;;
 esac
 	
