@@ -59,6 +59,9 @@ if [ ${versionShort[0]} = "10" ]; then
 		11)
 			versionString="El Capitan"
 			;;
+		14)
+			versionString="Mojave"
+			;;
 	esac
 	versionNumber="X $versionNumber"
 else
@@ -115,14 +118,27 @@ blue="4"
 purple="5"
 lightblue="6"
 grey="7"
-
+bold=$(tput bold)
 textColor=$(tput setaf $lightblue)
+name="${bold}$user"
+# if [ $2 ]
+# then
+# 	userName="$2"
+# fi
 normal=$(tput sgr0)
 
 # While loops for script arguments
 while [ $# -gt 0 ]
+
 do
 	case "$1" in
+
+	-n)		
+			if [ "$2" != "" ]; then
+        		name="${bold}$2"
+        	fi
+    		shift
+    		;;
 
     -c|--color)
 			GR='\033[00;32m'
@@ -162,9 +178,10 @@ do
 			break
 			;;
 	esac
+
 done
 
-
+welcomeBack="${textColor}Welcome back,${normal}"
 userText="${textColor}User:${normal}"
 hostnameText="${textColor}Hostname:${normal}"
 modelText="${textColor}Darwin:${normal}"
@@ -180,8 +197,8 @@ diskText="${textColor}Disk:${normal}"
 
 echo -e "
 
-${GR}                     ,
-${GR}                  ,##;
+${GR}                     ,            $welcomeBack $name!
+${GR}                  ,##;            
 ${GR}                 ####             $userText $user
 ${GR}                ;#'               $hostnameText $hostname
 ${GR}       ,#####;,   ,;#####;,       $modelText $model
