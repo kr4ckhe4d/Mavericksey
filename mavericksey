@@ -133,7 +133,7 @@ while [ $# -gt 0 ]
 do
 	case "$1" in
 
-	-n)		
+	-n|--name)		
 			if [ "$2" != "" ]; then
         		name="${bold}$2"
         	fi
