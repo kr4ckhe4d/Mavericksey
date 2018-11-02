@@ -17,10 +17,16 @@ Add the following line at the end of your ~/.bash_profile:
 or this one to have colored logo:
 
     mavericksey -c
+    
+or this one to have colored logo and a customized welcome message name:
+
+    mavericksey -c -n "John Doe"
 
 
 Options
 ------------
+	-n,  --name
+		Set custom name for welcome message.
 	-c,  --color
 		Color Logo
 		
